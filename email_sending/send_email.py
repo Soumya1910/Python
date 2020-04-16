@@ -16,8 +16,8 @@ subject = "An email with attachment from Python"
 sender_email = config.get('mail','sender_email')
 receiver_email = config.get('mail','receiver_email')
 password = config.get('mail','password')#input(f'Enter password for {sender_email} : ')
-# filename = "IncomeTaxPreview.pdf"
 filename = config.get('file','filename')
+
 # check if file exists, otherwise throw error message
 ROOT = os.path.abspath(os.getcwd())
 if os.path.exists(ROOT+'/'+filename) is False:
